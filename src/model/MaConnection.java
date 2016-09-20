@@ -32,7 +32,7 @@ public class MaConnection {
 		}		
 	}
 	
-	public static MaConnection getMaConnection(){
+	public static synchronized MaConnection getMaConnection(){
 		if (myCon==null){
 			myCon = new MaConnection("195.154.70.247","XE","PRIVE","PRIVE");
 		}
