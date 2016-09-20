@@ -9,17 +9,17 @@ public class MaConnection {
 	private static MaConnection myCon;
 	
 	private MaConnection(String ip, String instance, String user,String password){
-		Connection myCon;
+		Connection myConnect;
 		String mesParam = "jdbc:oracle:thin:@//"+ip+":1521/"+instance;
 		try {		
-			//Chargement de la classe du Driver désiré
+			//Chargement de la classe du Driver dÃ©sirÃ©
 			Class.forName ("oracle.jdbc.OracleDriver");
-			System.out.println("Driver chargé");
+			System.out.println("Driver chargÃ©");
 					
 			try {
-				//Préparation de la connection
-				myCon = DriverManager.getConnection(mesParam,user,password);
-				System.out.println("Connexion effectuée");
+				//PrÃ©paration de la connection
+				myConnect = DriverManager.getConnection(mesParam,user,password);
+				System.out.println("Connexion effectuÃ©e");
 				
 			} catch (SQLException e) {
 				System.out.println("Echec de la connexion");
