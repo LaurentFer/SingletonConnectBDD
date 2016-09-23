@@ -29,7 +29,7 @@ public class MaConnection {
 		try {
 			if (myCon==null || isNotConnexionActive()){
 				myCon = new MaConnection();
-				myCon.EtablirConnexion("195.154.70.247","XE","DIVE","DIVE");
+				myCon.EtablirConnexion("195.154.70.247","XE","DIVE","//Prive//");
 			}
 		} catch (SQLException e) {
 			System.out.println("Erreur lors de la vérification de la non-existence d'une connexion");
